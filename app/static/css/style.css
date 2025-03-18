@@ -1,0 +1,40 @@
+#map {
+  display: block;
+  height: 500px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+#legend {
+  padding: 10px;
+  font-family: Sanchez, serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 18px;
+  color: #555;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 1000;
+}
+
+#selectBox {
+  background: #fff;
+  padding: 10px;
+}
+
+.summary-details {
+  width: 35%;
+  padding: 0 10px;
+  padding-right: 0px;
+}
+
+.plotholder {
+  display: flex;
+}
+.plotholder > div {
+  width: 50%;
+}
