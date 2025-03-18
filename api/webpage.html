@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Depression Model Prediction</title>
+</head>
+<body>
+    <input type="text" id="input-data">
+    <button onclick="makePrediction()">Predict</button>
+    <div id="prediction-result"></div>
+
+    <script>
+        async function makePrediction() {
+            const inputData = document.getElementById('input-data').value;
+            const response = await fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ input: inputData })
+            });
+            const data = await response.json();
+            document.getElementById('prediction-result').innerText = data.prediction;
+        }
+    </script>
+</body>
+</html>
