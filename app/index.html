@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Depression Prediction Model</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h3 class="title">
+          <h1>Random Forest Model Predicts Depression in Students</h1>
+        </h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <select id="age-select">
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+         <button onclick="makePrediction()">Predict</button>
+      </div>
+      <div class="col">
+        <p class="text">
+  <h2>The prediction will show here!</h2>
+        </p>
+      </div>
+    </div>
+  </div>
+
+    <script>
+        async function makePrediction() {
+            const inputData = document.getElementById('input-data').value;
+            const response = await fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ input: inputData })
+            });
+            const data = await response.json();
+            document.getElementById('prediction-result').innerText = data.prediction;
+        }
+    </script>
+</body>
+</html>
