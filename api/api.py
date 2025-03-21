@@ -6,6 +6,14 @@ app = Flask(__name__)
 # Load the model
 model = joblib.load("model.h5") # Change model name
 
+@app.route("/")
+def welcome():
+    """List all available api routes."""
+    return (
+        f"Available Routes:<br/>"
+        f"/predict<br/>"
+    )
+
 @app.route("/predict", methods=["POST"])
 def predict():
     data = request.get_json()
