@@ -1,40 +1,62 @@
-#map {
-  display: block;
-  height: 500px;
-  width: 100%;
-  border-radius: 10px;
-}
-
-#legend {
-  padding: 10px;
-  font-family: Sanchez, serif;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 18px;
-  color: #555;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  position: fixed;
-  bottom: 20px;
-  right: 10px;
-  z-index: 1000;
-}
-
-#selectBox {
-  background: #fff;
-  padding: 10px;
-}
-
-.summary-details {
-  width: 35%;
-  padding: 0 10px;
-  padding-right: 0px;
-}
-
-.plotholder {
+.col1 {
   display: flex;
+  flex-basis: 25%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 10px;
+  padding: 5px;
+  letter-spacing: 1px;
 }
-.plotholder > div {
-  width: 50%;
+
+.col2 {
+  display: flex;
+  flex-basis: 25%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 10px;
+  padding: 5px;
+  letter-spacing: 1px;
+}
+
+.col3 {
+  display: flex;
+  flex-basis: 25%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 10px;
+  padding: 5px;
+  letter-spacing: 1px;
+}
+
+.col4 {
+  display: flex;
+  flex-basis: 25%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 20px;
+  padding: 5px;
+}
+
+.contain {
+  display: flex;
+  height: 250px;
+  width: 100%;
+  gap: 40px;
+}
+
+#header {
+  background: #fff;
+  text-align: center;
+}
+
+#button {
+  margin-top: 250px;
+  text-align: center;
+}
+
+#footer {
+  text-align: center;
+  height: 100px;
+  padding: 10px;
+  margin-top: 10px;
 }

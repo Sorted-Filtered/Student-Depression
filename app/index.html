@@ -2,34 +2,275 @@
 <html>
 <head>
     <title>Depression Prediction Model</title>
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
   <div class="container">
     <div class="row">
       <div class="col">
-        <h3 class="title">
+        <header id="header">
           <h1>Random Forest Model Predicts Depression in Students</h1>
-        </h3>
+        </header>
       </div>
     </div>
-    <div class="row">
-      <div class="col">
+    <div class="contain">
+      <div class="col1">
+        <h3>How old are you today?  </h3>
         <select id="age-select">
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+          <option value="32">32</option>
+          <option value="33">33</option>
+          <option value="34">34</option>
+          <option value="35">35</option>
+          <option value="36">36</option>
+          <option value="37">37</option>
+          <option value="38">38</option>
+          <option value="39">39</option>
+          <option value="40">40</option>
+          <option value="41">41</option>
+          <option value="42">42</option>
+          <option value="43">43</option>
+          <option value="44">44</option>
+          <option value="45">45</option>
+          <option value="46">46</option>
+          <option value="47">47</option>
+          <option value="48">48</option>
+          <option value="49">49</option>
+          <option value="50">50</option>
+          <option value="51">51</option>
+          <option value="52">52</option>
+          <option value="53">53</option>
+          <option value="54">54</option>
+          <option value="55">55</option>
+          <option value="56">56</option>
+          <option value="57">57</option>
+          <option value="58">58</option>
+          <option value="59">59</option>
+        </select>
+        <h3>What is your gender?  </h3>
+        <select id="gender-select">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+        <h3>What is your profession?  </h3>
+        <select id="prof-select">
+          <option value="Student">Student</option>
+          <option value="Architect">Architect</option>
+          <option value="Digital Marketer">Digital Marketer</option>
+          <option value="Content Writer">Content Writer</option>
+          <option value="Chef">Chef</option>
+          <option value="Doctor">Doctor</option>
+          <option value="Pharmacist">Parmacist</option>
+          <option value="Civil Engineer">Civil Engineer</option>
+          <option value="UX/UI Designer">UX/UI Designer</option>
+          <option value="Educational Consultant">Educational Consultant</option>
+          <option value="Manager">Manager</option>
+          <option value="Lawyer">Lawyer</option>
+          <option value="Entrepreneur">Entrepreneur</option>
+        </select>
+        <h3>What city do you live in? </h3>
+        <select id="city-select">
+          <option value="Visakhapatnam">Visakhapatnam</option>
+          <option value="Bangalore">Bangalore</option>
+          <option value="Srinagar">Srinagar</option>
+          <option value="Varanasi">Varanasi</option>
+          <option value="Jaipur">Jaipur</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Nagpur">Nagpur</option>
+          <option value="Nashik">Nashik</option>
+          <option value="Vadodara">Vadodara</option>
+          <option value="Kalyan">Kalyan</option>
+          <option value="Rajkot">Rajkot</option>
+          <option value="Ahmedabad">Ahmedabad</option>
+          <option value="Kolkata">Kolkata</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Lucknow">Lucknow</option>
+          <option value="Indore">Indore</option>
+          <option value="Surat">Surat</option>
+          <option value="Ludhiana">Ludhiana</option>
+          <option value="Bhopal">Bhopal</option>
+          <option value="Meerut">Meerut</option>
+          <option value="Agra">Agra</option>
+          <option value="Ghaziabad">Ghaziabad</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Vasai-Virar">Vasai-Virar</option>
+          <option value="Kanpur">Kanpur</option>
+          <option value="Patna">Patna</option>
+          <option value="Faridabad">Faridabad</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Saanvi">Saanvi</option>
+          <option value="Bhavna">Bhavna</option>
+          <option value="Less Delhi">Less Delhi</option>
+          <option value="Mira">Mira</option>
+          <option value="Harsha">Harsha</option>
+          <option value="Vaanya">Vaanya</option>
+          <option value="Gaurav">Gaurav</option>
+          <option value="Harsh">Harsh</option>
+          <option value="Reyansh">Reyansh</option>
+          <option value="Kibara">Kibara</option>
+          <option value="Rashi">Rashi</option>
+          <option value="Nalyan">Nalyan</option>
+          <option value="Mihir">Mihir</option>
+          <option value="Nalini">Nalini</option>
+          <option value="Nandini">Nandini</option>
+          <option value="Khaziabad">Khaziabad</option>
+        </select>
       </div>
-      <div class="col">
+      <div class="col2">
+        <h3>How much academic pressure do you feel? (1 is low, 5 is high) </h3>
+        <select id="ac-pres-select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <h3>How much work pressure do you feel? (1 is low, 5 is high) </h3>
+        <select id="work-pres-select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <h3>What is your CGPA? (Cumulative Grade Point Average) </h3>
+        <select id="cgpa-select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <h3>How much satisfaction do you get from your studies? (1 is low, 5 is high) </h3>
+        <select id="study-sat-select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
       </div>
-      <div class="col">
+      <div class="col3">
+        <h3>How much satisfaction do you get from your job? (1 is low, 5 is high) </h3>
+        <select id="work-sat-select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <h3>How much sleep do you usually get a night on average? </h3>
+        <select id="sleep-select">
+          <option value="Less than 5 hours">Less than 5 hours</option>
+          <option value="5-6 hours">5-6 hours</option>
+          <option value="7-8 hours">7-8 hours</option>
+          <option value="More than 8 hours">More than 8 hours</option>
+          <option value="Others">Others</option>
+        </select>
+        <h3>Which degree are you working towards? </h3>
+        <select id="degree-select">
+          <option value="Class 12">Class 12</option>
+          <option value="B.Ed">B.Ed</option>
+          <option value="B.Com">B.Com</option>
+          <option value="B.Arch">B.Arch</option>
+          <option value="BCA">BCA</option>
+          <option value="MSc">MSc</option>
+          <option value="B.Tech">B.Tech</option>
+          <option value="MCA">MCA</option>
+          <option value="M.Tech">M.Tech</option>
+          <option value="BHM">BHM</option>
+          <option value="BSc">BSc</option>
+          <option value="M.Ed">M.Ed</option>
+          <option value="B.Pharm">B.Pharm</option>
+          <option value="M.Com">M.Com</option>
+          <option value="MBBS">MBBS</option>
+          <option value="BBA">BBA</option>
+          <option value="LLB">LLB</option>
+          <option value="BE">BE</option>
+          <option value="BA">BA</option>
+          <option value="M.Pharm">M.Pharm</option>
+          <option value="MD">MD</option>
+          <option value="MBA">MBA</option>
+          <option value="MA">MA</option>
+          <option value="PhD">PhD</option>
+          <option value="LLM">LLM</option>
+          <option value="MHM">MHM</option>
+          <option value="ME">ME</option>
+          <option value="Others">Others</option>
+        </select>
+        <h3>How healthy are your dietary habits usually?  </h3>
+        <select id="diet-select">
+          <option value="Unhealthy">Unhealthy</option>
+          <option value="Moderate">Moderate</option>
+          <option value="Healthy">Healthy</option>
+          <option value="Others">Others</option>
+        </select>
       </div>
-      <div class="col">
+      <div class="col4">
+        <h3>Have you ever had suicidal thoughts?  </h3>
+        <select id="suicide-select">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+        <h3>How many hours a day do you spend working/studying? </h3>
+        <select id="work-study-select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+        <h3>How much financial stress are you under? (1 is low, 5 is high)  </h3>
+        <select id="financial-select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <h3>Do you have any family members who have mental illnesses? </h3>
+        <select id="fam-history-select">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
       </div>
     </div>
     <div class="row">
-      <div class="col">
+      <div id="button">
          <button onclick="makePrediction()">Predict</button>
       </div>
-      <div class="col">
+      <div id="footer">
         <p class="text">
-  <h2>The prediction will show here!</h2>
+          <div id="prediction">
+            <h2>The prediction will show here!</h2>
+          </div>
         </p>
       </div>
     </div>
@@ -46,7 +287,7 @@
                 body: JSON.stringify({ input: inputData })
             });
             const data = await response.json();
-            document.getElementById('prediction-result').innerText = data.prediction;
+            document.getElementById('prediction').innerText = data.prediction;
         }
     </script>
 </body>
