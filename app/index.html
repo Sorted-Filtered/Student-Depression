@@ -267,10 +267,10 @@
          <button onclick="makePrediction()">Predict</button>
       </div>
       <div id="footer">
-        <p class="text">
+        <p class="text"><h2>
           <div id="prediction">
-            <h2>The prediction will show here!</h2>
-          </div>
+            The prediction will show here!
+          </h2></div>
         </p>
       </div>
     </div>
@@ -278,13 +278,12 @@
 
     <script>
         async function makePrediction() {
-            const inputData = document.getElementById('input-data').value;
-            const response = await fetch('/predict', {
+            const response = await fetch('http://127.0.0.1:5000/predict', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ input: inputData })
+                body: JSON.stringify({"input": [document.getElementById("age-select").value, document.getElementById("ac-pres-select").value, document.getElementById("work-pres-select").value, document.getElementById("cgpa-select").value, document.getElementById("study-sat-select").value, document.getElementById("work-sat-select").value, document.getElementById("work-study-select").value, document.getElementById("prof-select").value, document.getElementById("city-select").value, document.getElementById("gender-select").value, document.getElementById("sleep-select").value, document.getElementById("diet-select").value, document.getElementById("degree-select").value, document.getElementById("suicide-select").value, document.getElementById("fam-history-select").value, document.getElementById("financial-select").value]})
             });
             const data = await response.json();
             document.getElementById('prediction').innerText = data.prediction;
