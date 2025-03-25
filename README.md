@@ -9,7 +9,7 @@
 [Google Slides Presentation](https://docs.google.com/presentation/d/1EdIuKcOOn9DrwLD_oTe0_vwz1WLMgdN1JRT_LCTdI54/edit?usp=sharing)
 
 ## Project Description
-This project provides a website that predicts depression in students based on certain student parameters. Users can choose from dropdowns on the website and press a button to receive a prediction of depression status from a trained random forest model with a 85% accuracy. Googles slides presentation as well as Tableau visualizations available above. 
+The aim of this project is to predict depression among college students in India. To do this, our random forest model will look at a variety of factors including demographics, academic indicators, lifestyle, the academic degree pursued, and family history. The dataset comes from an anonymous survey given to college students in India. This project provides a website that predicts depression in students based on certain student parameters. Users can choose from dropdowns on the website and press a button to receive a prediction of depression status from a trained random forest model with a 85% accuracy. Googles slides presentation as well as Tableau visualizations available above. 
 
 ## Execution
 Before running the jupyter notebook file and app, ensure you have the following installed:
@@ -40,7 +40,7 @@ Website:
 
 -includes drop down boxes to make selections from various categories included in the dataset.
 
--Predict button that takes selected inputs, sends it to an API, receives output prediction, and displays it in the webpage.
+-Predict button that takes selected dropdown inputs, sends it to an API, receives output prediction, and displays it in the webpage.
 
 
 Random Forest Model:
