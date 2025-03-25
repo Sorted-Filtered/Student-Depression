@@ -42,6 +42,7 @@ Website:
 
 -Predict button that takes selected inputs, sends it to an API, receives output prediction, and displays it in the webpage.
 
+
 Random Forest Model:
 
 -Includes SQL integration, short analysis of dataset, data preprocessing, splitting and scaling the data with sklearn, training the model, and testing the trained model.
@@ -50,11 +51,13 @@ Random Forest Model:
 
 -Includes mapped Random Forest Decision Tree from the model, as well as saving trained model/scaler for use in the API.
 
+
 API:
 
 -Includes function that takes input from website, formats it into the correct format, and uses saved scaler/model to make a prediction based on that input, which is sent back to the website.
 
 Python modules used include Pandas, joblib, matplotlib, sklearn, Flask, Flask-CORS, and sqlite3.
+
 
 ## Contributors
 This project was done jointly by Connor Casey, Jenna Anderson, Dylan Mavencamp, Alston C. Armah, and Lance Peterson.
