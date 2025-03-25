@@ -4,7 +4,9 @@
 
 [Dataset taken from Kaggle](https://www.kaggle.com/datasets/adilshamim8/student-depression-dataset/data)
 
-[Tableau Visualizations from Dataset](https://public.tableau.com/app/profile/dylan.mavencamp/viz/Book3_17429458940580/Dashboard1?publish=yes)  ## Update with Tableau Public Visualization Workbook!
+[Tableau Visualizations from Dataset](https://public.tableau.com/app/profile/dylan.mavencamp/viz/Book3_17429458940580/Dashboard1?publish=yes)
+
+[Tableau Map Visualization]( ## Update with Tableau Public Visualization Workbook!)
 
 [Google Slides Presentation](https://docs.google.com/presentation/d/1EdIuKcOOn9DrwLD_oTe0_vwz1WLMgdN1JRT_LCTdI54/edit?usp=sharing)
 
